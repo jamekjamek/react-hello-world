@@ -9,8 +9,9 @@ class BlogPost extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('http://localhost:3004/posts')
             .then((res) => {
+                console.log(res);
                 this.setState({
                     post: res.data
                 })
